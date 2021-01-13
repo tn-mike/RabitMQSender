@@ -14,7 +14,7 @@ namespace RabitMQSender.Services
         {
             //return CalTime();
             var factory = new ConnectionFactory() { HostName = "192.168.100.128" };
-            using (var connection = factory.CreateConnection())
+            using (var connection = factory.CreateConnection()) 
             using (var channel = connection.CreateModel())
             {
                 channel.QueueDeclare(queue: "task_queue",
